@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a202c;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    width:94%;
+    font-family: "Libre Baskerville", sans-serif;
+    margin-left:auto;
+}
+
+#score {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+}
+
+.highscores-container {
+    background-color: #2d3748;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.highscores-container h2 {
+    color: white;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+
+#highscores {
+    color: white;
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 200px;
+}
+.player-name {
+    color: #90cdf4 !important; /* Bleu clair pour les noms des joueurs */
+    font-weight: 500;
+}
+#highscores th,
+#highscores td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #4a5568;
+    min-width: 80px; 
+}
+
+#highscores th {
+    background-color: #4a5568;
+    font-weight: bold;
+}
+
+#highscores .rank {
+    color: #f6e05e;
+    font-weight: bold;
+}
+
+#highscores .score {
+    color: #68d391;
+}
+
+#highscores .date {
+    color: #a0aec0;
+    font-size: 0.9em;
+}
+
+.score_column{
+    display:flex;
+    flex-direction:column;
+}
+
+#gameCanvas {
+    border: 2px solid #4a5568;
+    background-color: #2d3748;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.horizontal-controls {
+    display: flex;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4299e1;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #3182ce;
+}
+
+#restartBtn {
+    margin-top: 20px;
+    background-color: #48bb78;
+    width:36%;
+    margin-left:5em;
+}
+
+#restartBtn:hover {
+    background-color: #38a169;
+}
+
+.hidden {
+    display: none;
+}
+.cadrage_map{
+    display:flex;
+    align-items:center;
+    gap:1.5em;
+}
+
+.game-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1000;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.game-alert.error {
+    background-color: #e53e3e;
+    box-shadow: 0 4px 6px rgba(229, 62, 62, 0.3);
+}
+
+.game-alert.fade-in {
+    opacity: 1;
+}
+
+.game-alert.hidden {
+    display: none;
+}
+
+.playbutton{
+    background-color:white;
+    padding:1em;
+    margin:2em;
+    border-radius:8px;
+    line-height:4em;
+}
+
+.difficulty-selector {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.difficulty-selector h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.difficulty-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-button[data-difficulty="easy"] {
+    background-color: #48bb78;
+    color: white;
+}
+
+.difficulty-button[data-difficulty="normal"] {
+    background-color: #4299e1;
+    color: white;
+}
+
+.difficulty-button[data-difficulty="hard"] {
+    background-color: #f56565;
+    color: white;
+}
+
+.difficulty-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-button.selected {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+

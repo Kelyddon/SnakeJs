@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Snake Game</h1>
+        <div>
+            <a href="https://kelyddondiemunsch.sites.3wa.io/algo/sprintfin/devoir/Arkanoid/index.html" class="playbutton">Arkanoid</a>
+            <a href="https://kelyddondiemunsch.sites.3wa.io/algo/sprintfin/devoir/Pacman/index.html" class="playbutton">Pac-man</a>
+        </div>
+        <div class="difficulty-selector">
+            <h2>Choisissez la difficulté</h2>
+            <div class="difficulty-buttons">
+                <button class="difficulty-button" data-difficulty="easy">Facile</button>
+                <button class="difficulty-button" data-difficulty="normal">Normal</button>
+                <button class="difficulty-button" data-difficulty="hard">Difficile</button>
+            </div>
+        </div>
+        <div class="cadrage_map">
+            <div class="score_column">
+                <div id="score">Score: 0</div>
+
+                <div class="highscores-container">
+                    <h2>Meilleurs Scores</h2>
+                    <table id="highscores">
+                        <thead>
+                            <tr>
+                                <th>Rang</th>
+                                <th>Score</th>
+                                <th>Nom</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <canvas id="gameCanvas"></canvas>
+
+            <div>
+                <div class="controls">
+                    <button id="upBtn">↑</button>
+                    <div class="horizontal-controls">
+                        <button id="leftBtn">←</button>
+                        <button id="rightBtn">→</button>
+                    </div>
+                    <button id="downBtn">↓</button>
+                </div>
+            </div>
+        </div>
+        <button id="restartBtn" class="hidden">Recommencer</button>
+    </div>
+        <script type="module" src="script.js"></script>
+</body>
+
+</html>
