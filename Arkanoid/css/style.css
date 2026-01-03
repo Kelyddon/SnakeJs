@@ -1,0 +1,33 @@
+ body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+        }
+canvas {
+            border: 2px solid #fff;
+}
+.playbutton{
+    background-color:white;
+    padding:1em;
+    margin:2em;
+    border-radius:8px;
+    line-height:4em;
+}
+h1 {
+    color: white;
+    margin-bottom: 20px;
+    width:94%;
+    font-family: "Libre Baskerville", sans-serif;
+    margin-left:auto;
+}
+.cadrage_carte{
+    display:flex;
+    align-items:center;
+    gap:1.5em;
+}
+.game-container {
+    text-align: center;
+}
